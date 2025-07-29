@@ -14,9 +14,10 @@ public class GeradorDeProdutosController {
     private final ChatClient chatClient;
 
     public GeradorDeProdutosController(ChatClient.Builder chatClientBuilder) {
+        // aqui só um exemplo de como configurar default
         chatClientBuilder.defaultOptions(OpenAiChatOptions.builder()
                         .model(OpenAiApi.ChatModel.CHATGPT_4_O_LATEST)
-                        .temperature(2.0)
+                        .temperature(1.5)
                         .maxTokens(100)
                 .build());
         this.chatClient = chatClientBuilder.build();
